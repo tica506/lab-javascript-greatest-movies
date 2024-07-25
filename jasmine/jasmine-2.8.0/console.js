@@ -42,20 +42,20 @@ getJasmineRequireObj().ConsoleReporter = function() {
 
   function ConsoleReporter(options) {
     var print = options.print,
-      showColors = options.showColors || false,
-      onComplete = options.onComplete || function() {},
-      timer = options.timer || noopTimer,
-      specCount,
-      failureCount,
-      failedSpecs = [],
-      pendingCount,
-      ansi = {
-        green: '\x1B[32m',
-        red: '\x1B[31m',
-        yellow: '\x1B[33m',
-        none: '\x1B[0m'
-      },
-      failedSuites = [];
+        showColors = options.showColors || false,
+        onComplete = options.onComplete || function() {},
+        timer = options.timer || noopTimer,
+        specCount,
+        failureCount,
+        failedSpecs = [],
+        pendingCount,
+        ansi = {
+          green: '\x1B[32m',
+          red: '\x1B[31m',
+          yellow: '\x1B[33m',
+          none: '\x1B[0m'
+        },
+        failedSuites = [];
 
     print('ConsoleReporter is deprecated and will be removed in a future version.');
 
@@ -78,7 +78,7 @@ getJasmineRequireObj().ConsoleReporter = function() {
         printNewline();
 
         var specCounts = specCount + ' ' + plural('spec', specCount) + ', ' +
-          failureCount + ' ' + plural('failure', failureCount);
+            failureCount + ' ' + plural('failure', failureCount);
 
         if (pendingCount) {
           specCounts += ', ' + pendingCount + ' pending ' + plural('spec', pendingCount);
